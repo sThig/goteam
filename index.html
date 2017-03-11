@@ -1,0 +1,27 @@
+<html lang='eng'>
+
+<head>
+    <title>ARRAY TEST</title>
+</head>
+
+<body>
+    <h2>Create Your Team</h2>
+    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world"/>
+    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world1"/>
+    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world2"/>
+    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world3"/>
+    <div id="myDiv"></div>
+    <script>
+
+      const answer = [].slice.call(document.querySelectorAll(".searchField"));
+      function  call() {
+        return answer.value;
+        console.log('answer', answer);
+      }
+      names  = [].map.call(answer, function( answer ) {
+        return answer.value;
+        }).join( ',' );
+        console.log('answer', answer);
+    </script>
+</body>
+</html>
