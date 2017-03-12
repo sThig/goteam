@@ -6,22 +6,17 @@
 
 <body>
     <h2>Create Your Team</h2>
-    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world"/>
-    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world1"/>
-    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world2"/>
-    <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField" value="hello world3"/>
-    <div id="myDiv"></div>
-    <script>
+    <input type="text" class="player" name="Player" id="Players" value="enter name" />
+    <input type="text" class="player" name="Player" id="Players" value="enter name1"/>
+    <input type="text" class="player" name="Player" id="Players" value="enter name2"/>
+    <input type="text" class="player" name="Player" id="Players" value="enter name3"/><br />
+    <input type="button" id="go" value="Go >>" onclick="createJSONObject()" />
 
-      const answer = [].slice.call(document.querySelectorAll(".searchField"));
-      function  call() {
-        return answer.value;
-        console.log('answer', answer);
-      }
-      names  = [].map.call(answer, function( answer ) {
-        return answer.value;
-        }).join( ',' );
-        console.log('answer', answer);
+    <script>
+    const playerNames = document.querySelectorAll('.player')[0].value;;
+
+    console.log('playerNames', playerNames );
     </script>
 </body>
+
 </html>
