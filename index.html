@@ -10,12 +10,16 @@
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name1"/>
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name2"/>
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name3"/><br />
-    <input type="button" id="go" value="Go >>" onclick="createJSONObject()" />
+    <input type="button" id="go" value="Go >>"  />
 
     <script>
+    document.getElementById("go").addEventListener("click", function() {
       const inputs = document.querySelectorAll(".player")
       const values = Array.from(inputs).map(input => input.value)
       console.log('values', values);
+    });
+
+
     </script>
 </body>
 </html>
