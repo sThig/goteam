@@ -6,17 +6,16 @@
 
 <body>
     <h2>Create Your Team</h2>
-    <input type="text" class="player" name="Player" id="Players" value="enter name" />
-    <input type="text" class="player" name="Player" id="Players" value="enter name1"/>
-    <input type="text" class="player" name="Player" id="Players" value="enter name2"/>
-    <input type="text" class="player" name="Player" id="Players" value="enter name3"/><br />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name" />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name1"/>
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name2"/>
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name3"/><br />
     <input type="button" id="go" value="Go >>" onclick="createJSONObject()" />
 
     <script>
-    const playerNames = document.querySelectorAll('.player')[0].value;;
-
-    console.log('playerNames', playerNames );
+      const inputs = document.querySelectorAll(".player")
+      const values = Array.from(inputs).map(input => input.value)
+      console.log('values', values);
     </script>
 </body>
-
 </html>
