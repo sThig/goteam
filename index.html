@@ -9,14 +9,29 @@
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name" />
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name1"/>
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name2"/>
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name3"/><br />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name3"/>
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name4"/>
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name5"/><br />
     <input type="button" id="go" value="Go >>"  />
-
+    <h2 id="captain" class="captain"></h2>
+    <br />
+    <h2 id="cocaptain" class="captain"></h2>
+    <ul>
+      <li id="teammateys"></li>
+    </ul>
     <script>
+
+
     document.getElementById("go").addEventListener("click", function() {
       const inputs = document.querySelectorAll(".player")
-      const values = Array.from(inputs).map(input => input.value)
-      console.log('values', values);
+      const team = Array.from(inputs).map(input => input.value)
+      const [captain, id, ...teammates] = team;
+      // const players = teammates;
+      // console.log('players', players);
+
+      document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
+      document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
+      document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
     });
 
 
