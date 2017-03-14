@@ -26,8 +26,7 @@
       const inputs = document.querySelectorAll(".player")
       const team = Array.from(inputs).map(input => input.value)
       const [captain, id, ...teammates] = team;
-      // const players = teammates;
-      // console.log('players', players);
+
 
       document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
       document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
